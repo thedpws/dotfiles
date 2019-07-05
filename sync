@@ -5,7 +5,7 @@ DIFF="$(git diff)"
 if [[ "$DIFF" != "" ]]; then
   # There are differences
   echo "$DIFF"
-  echo "There are differences between the local configs and the remote configs. Push changes? [y/N]"
+  echo -n "There are differences between the local configs and the remote configs. Push changes? [y/N]"
   read answer
   if [[ "$answer" == "y" ]]; then
     git add . && git commit -m "Autoupdate config: $(date)"
@@ -30,12 +30,17 @@ else
 fi
 
 if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    cat ~/.bashrc   >> ~/.bashrc.bak
+    cat ~/.bashrc           >> ~/.bashrc.bak
+    cat ~/.config/i3/config >> ~/.config/i3/config.bak
 
     ln -svf 	$DOTFILES_PATH/bash 	        ~/.bashrc
     ln -svf 	$DOTFILES_PATH/i3		          ~/.config/i3/config
 fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
+    cat ~/.chunkwmrc        >> ~/.chunkwmrc.bak
+    cat ~/.skhdrc           >> ~/.skhdrc.bak
+    cat ~/.bash_profile     >> ~/.bash_profile.bak
+
     ln -svf 	$DOTFILES_PATH/bash	          ~/.bash_profile
     ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
     ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc
