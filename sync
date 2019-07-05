@@ -1,6 +1,17 @@
 #!/bin/sh
 
-ln -svf 	/home/azvasquez/Projects/dotfiles/bash_profile	~/.bash_profile
-ln -svf 	/home/azvasquez/Projects/dotfiles/bashrc 	~/.bashrc
-ln -svf 	/home/azvasquez/Projects/dotfiles/i3		~/.config/i3/config
-ln -svf		/home/azvasquez/Projects/dotfiles/vim		~/.vimrc
+DOTFILES_PATH="$(pwd)"
+
+if [ -e ~/.bashrc ]; then
+    PROFILE=~/.bashrc
+elif [ -e ~/.bash_profile  ]; then
+    PROFILE=~/.bash_profile
+else
+    PROFILE=/dev/null
+fi
+
+#ln -svf 	$DOTFILES_PATH/bash_profile	    $PROFILE
+ln -svf 	$DOTFILES_PATH/bashrc 	        ~/.bashrc
+ln -svf 	$DOTFILES_PATH/i3		        ~/.config/i3/config
+ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
+ln -svf		$DOTFILES_PATH/inputrc		    ~/.inputrc
