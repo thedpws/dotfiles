@@ -8,9 +8,6 @@
 " ▀██████▀  █▀    ▀█   ███   █▀    ███    ███ ████████▀  
 "                                  ███    ███            
 
-" use 4 bit colors
-colorscheme dim
-
 set nocompatible              " be iMproved, required
 filetype off                  " required
 

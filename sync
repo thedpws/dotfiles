@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 git pull origin master
 
@@ -12,14 +12,24 @@ else
     PROFILE=/dev/null
 fi
 
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    cat ~/.bashrc   >> ~/.bashrc.bak
+
+    ln -svf 	$DOTFILES_PATH/bash 	        ~/.bashrc
+    ln -svf 	$DOTFILES_PATH/i3		          ~/.config/i3/config
+fi
+if [[ "$OSTYPE" == "darwin"* ]]; then
+    ln -svf 	$DOTFILES_PATH/bash	          ~/.bash_profile
+    ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
+    ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc
+fi
+
 # Backup
-cat ~/.bashrc >> ~/.bashrc.bak
-cat ~/.vimrc >> ~/.vimrc.bak
-cat ~/.inputrc >> ~/.inputrc.bak
+cat ~/.vimrc        >> ~/.vimrc.bak
+cat ~/.inputrc      >> ~/.inputrc.bak
 cat ~/.bash_profile >> ~/.bash_profile.bak
 
-#ln -svf 	$DOTFILES_PATH/bash_profile	    $PROFILE
-ln -svf 	$DOTFILES_PATH/bashrc 	        ~/.bashrc
-ln -svf 	$DOTFILES_PATH/i3		        ~/.config/i3/config
 ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
-ln -svf		$DOTFILES_PATH/inputrc		    ~/.inputrc
+ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
+
+
