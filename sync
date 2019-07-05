@@ -1,0 +1,6 @@
+#!/bin/sh
+
+ln -svf 	/home/azvasquez/Projects/dotfiles/bash_profile	~/.bash_profile
+ln -svf 	/home/azvasquez/Projects/dotfiles/bashrc 	~/.bashrc
+ln -svf 	/home/azvasquez/Projects/dotfiles/i3		~/.config/i3/config
+ln -svf		/home/azvasquez/Projects/dotfiles/vim		~/.vimrc
