@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git pull origin master
+
 DOTFILES_PATH="$(pwd)"
 
 if [ -e ~/.bashrc ]; then
