@@ -9,20 +9,20 @@
 "                                  ███    ███            
 
 " use 4 bit colors
-" colorscheme dim
+colorscheme dim
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-
+" set the runtime path to include Vundle and initialize
 " Remaps
 noremap ; :
 noremap : ;
 
 syntax enable
-set tabstop=4		" 1 tab = N spaces
-set softtabstop=4 	" 1 tab in editing = N spaces
-set shiftwidth=4    " indenting is 4 spaces
+set tabstop=2		" 1 tab = N spaces
+set softtabstop=2 	" 1 tab in editing = N spaces
+set shiftwidth=2    " indenting is 4 spaces
 set expandtab		" tabs are spaces
 
 set number		    " show line numbers
@@ -66,3 +66,11 @@ au BufRead,BufNewFile *.g4 set filetype=antlr4
 " ocaml comments
 autocmd FileType ocaml setlocal commentstring=\(\*\ %s\ \*\)
 
+" pane navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" Commands
+autocmd BufWritePost .notes.md !pandoc -t slidy -s .notes.md -o .notes.html --metadata pagetitle="$(pwd) Notes"
