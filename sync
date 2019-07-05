@@ -1,5 +1,22 @@
 #!/bin/bash
 
+DIFF="$(git diff)"
+
+if [[ "$DIFF" != "" ]]; then
+  # There are differences
+  echo "$DIFF"
+  echo "There are differences between the local configs and the remote configs. Push changes? [y/N]"
+  read answer
+  if [[ "$answer" == "y" ]]; then
+    git add . && git commit -m "Autoupdate config: $(date)"
+    git push origin master
+    if [[ "$?" != "0" ]]; then
+      echo "Error pushing to master."
+      exit $?
+    fi
+  fi
+fi
+
 git pull origin master
 
 DOTFILES_PATH="$(pwd)"
