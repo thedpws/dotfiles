@@ -38,7 +38,7 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
     cat ~/.chunkwmrc        >> ~/.chunkwmrc.bak
-    cat ~/.yabairc          >> ~/.chunkwmrc.bak
+    cat ~/.yabairc          >> ~/.yabairc.bak
     cat ~/.skhdrc           >> ~/.skhdrc.bak
     cat ~/.bash_profile     >> ~/.bash_profile.bak
 
