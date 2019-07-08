@@ -38,11 +38,13 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
 fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
     cat ~/.chunkwmrc        >> ~/.chunkwmrc.bak
+    cat ~/.yabairc          >> ~/.yabairc.bak
     cat ~/.skhdrc           >> ~/.skhdrc.bak
     cat ~/.bash_profile     >> ~/.bash_profile.bak
 
     ln -svf 	$DOTFILES_PATH/bash	          ~/.bash_profile
     ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
+    ln -svf   $DOTFILES_PATH/yabai          ~/.yabairc
     ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc
 fi
 
