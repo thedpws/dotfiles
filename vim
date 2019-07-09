@@ -70,4 +70,4 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " Commands
-autocmd BufWritePost .notes.md !pandoc -t slidy -s .notes.md -o .notes.html --metadata pagetitle="$(pwd) Notes"
+autocmd BufWritePost .notes.md silent! !pandoc -t slidy -s .notes.md -o .notes.html --metadata pagetitle="$(pwd) Notes" &

@@ -96,9 +96,24 @@ fi
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-#PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$'
+
 PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]🐏 "
 alias git='hub'
 
 # Set PATH
 export PATH="$PATH:~/.development/flutter/bin"
+alias n='vim .notes.md'
+alias s='source ~/.bash_profile'
+alias ss='vim ~/.bash_profile'
+alias cflogin='cf login -a https://api.paas.mia.ulti.io -o techstar-bootcamp -s dev-aeyzechiahv -u aeyzechiahv'
+alias crunchyroll='open https://crunchyroll.com'
+alias gcal='open https://calendar.google.com/calendar/r'
+alias github='hub'
+alias gmail='open https://mail.google.com/mail/u/0/#inbox'
+alias jira='open https://ultidev/secure/RapidBoard.jspa?rapidView=1740'
+alias l='clear'
+alias plantronics='SwitchAudioSource -s Plantronics\ BT600 && echo "Switched audio to Plantronics BT600" && say --interactive --voice=Fred --rate=60 My roflcopter goes soi soi soi soi soi soi soi soi'
+alias s='source ~/.bash_profile && echo "Sourced ~/.bash_profile"'
+alias ss='vim ~/.bash_profile'
+alias youtube='open https://youtube.com'
+alias ~='cd ~'
