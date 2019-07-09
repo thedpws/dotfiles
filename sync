@@ -55,5 +55,3 @@ cat ~/.bash_profile >> ~/.bash_profile.bak
 
 ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
 ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
-
-
