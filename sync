@@ -56,6 +56,8 @@ fi
 cat ~/.vimrc        >> ~/.vimrc.bak
 cat ~/.inputrc      >> ~/.inputrc.bak
 cat ~/.bash_profile >> ~/.bash_profile.bak
+cat ~/.tmux.conf    >> ~/.tmux.conf.bak
 
 ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
 ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
+ln -svf   $DOTFILES_PATH/tmux           ~/.tmux.conf
