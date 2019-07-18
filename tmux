@@ -46,11 +46,11 @@ set -g status-interval 10     # redraw status line every 10 seconds
 
 # Set inactive/active window styles
 #set inactive/active window styles
-set -g window-style 'fg=white,bg=black'
-set -g window-active-style 'fg=white,bg=black'
+#set -g window-style 'fg=white,bg=black'
+#set -g window-active-style 'fg=white,bg=black'
 # set the pane border colors 
 
 #or if you a brighter active border, uncomment the following line:
-#set -g pane-active-border-bg colour51
+##set -g pane-active-border-bg colour51
 set -g mouse on
 
