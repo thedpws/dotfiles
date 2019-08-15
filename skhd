@@ -1,6 +1,6 @@
-# Return opens terminal
-shift + alt - return : open -na /Applications/Utilities/Terminal.app
-alt - return : open /Applications/Utilities/Terminal.app
+# Return opens Kitty
+shift + alt - return : open -na /Applications/Kitty.app
+alt - return : open /Applications/Kitty.app
 
 # S opens safari
 alt - s : open /Applications/Safari.app
