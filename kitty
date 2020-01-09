@@ -1,4 +1,5 @@
 # vim:fileencoding=utf-8:ft=conf:foldmethod=marker
+# hi
 
 #: Fonts {{{
 
@@ -74,7 +75,7 @@
 
 #: Cursor customization {{{
 
-# cursor #cccccc
+cursor #000000
 
 #: Default cursor color
 

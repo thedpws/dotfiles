@@ -97,11 +97,12 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]🐏 "
+PS1="\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\] "
 alias git='hub'
 
 # Set PATH
 export PATH="$PATH:~/.development/flutter/bin"
+export LINEUPS="~/Church/lineups"
 alias n='vim .notes.md'
 alias s='source ~/.bash_profile'
 alias ss='vim ~/.bash_profile'
@@ -120,3 +121,10 @@ alias ~='cd ~'
 alias ports='cat ~/Docs/ports'
 alias rabbit='open https://www.rabb.it -na "Google Chrome"'
 alias restart='brew services restart'
+function checktemp(){
+  osx-cpu-temp
+  sleep 10
+  checktemp
+}
+
+neofetch

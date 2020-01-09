@@ -1,17 +1,27 @@
-# Return opens Kitty
-shift + alt - return : open -na /Applications/Kitty.app
-alt - return : open /Applications/Kitty.app
+# Return opens Terminal
+shift + alt - return : open -na /Applications/Utilities/Terminal.app
+alt - return : open /Applications/Utilities/Terminal.app
 
 # S opens safari
 alt - s : open /Applications/Safari.app
-shift + alt - s : open -na /Applications/Safari.app
+shift + alt - s : open -n /Applications/Safari.app http://google.com
 
 # D opens Disocrd
 alt - d : open /Applications/Discord.app
 
+# T opens Telegram
+alt - t : open /Applications/Telegram.app
+
 # M opens Messages
 alt - m : open /Applications/Messages.app
 shift + alt - m : open -na /Applications/Messages.app
+
+# shift F opens Finder
+shift + alt - f : open -na /Applications/Finder.app
+
+# W opens wunderlist
+alt - w : open /Applications/Wunderlist.app
+shift + alt - w : open -na /Applications/Wunderlist.app
 
 # focus window
 alt - h : yabai -m window --focus west
