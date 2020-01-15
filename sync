@@ -37,7 +37,8 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     cat ~/.bashrc           >> ~/.bashrc.bak
     cat ~/.config/i3/config >> ~/.config/i3/config.bak
 
-    ln -svf 	$DOTFILES_PATH/bash 	        ~/.bashrc
+    ln -svf 	$DOTFILES_PATH/sh 	        ~/.bashrc
+    ln -svf 	$DOTFILES_PATH/sh 	        ~/.zshrc
     ln -svf 	$DOTFILES_PATH/i3		          ~/.config/i3/config
 fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
@@ -46,7 +47,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     cat ~/.skhdrc           >> ~/.skhdrc.bak
     cat ~/.bash_profile     >> ~/.bash_profile.bak
 
-    ln -svf 	$DOTFILES_PATH/bash	          ~/.bash_profile
+    ln -svf 	$DOTFILES_PATH/sh	            ~/.bash_profile
+    ln -svf 	$DOTFILES_PATH/sh	            ~/.zshrc
     ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
     ln -svf   $DOTFILES_PATH/yabai          ~/.yabairc
     ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc

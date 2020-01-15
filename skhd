@@ -1,6 +1,6 @@
 # Return opens Terminal
-shift + alt - return : open -na /Applications/Utilities/Terminal.app
-alt - return : open /Applications/Utilities/Terminal.app
+shift + alt - return : open -na /System/Applications/Utilities/Terminal.app
+alt - return : open /System/Applications/Utilities/Terminal.app
 
 # S opens safari
 alt - s : open /Applications/Safari.app
@@ -13,11 +13,11 @@ alt - d : open /Applications/Discord.app
 alt - t : open /Applications/Telegram.app
 
 # M opens Messages
-alt - m : open /Applications/Messages.app
-shift + alt - m : open -na /Applications/Messages.app
+alt - m : open /System/Applications/Messages.app
+shift + alt - m : open -na /System/Applications/Messages.app
 
 # shift F opens Finder
-shift + alt - f : open -na /Applications/Finder.app
+shift + alt - f : open -na /System/Applications/Finder.app
 
 # W opens wunderlist
 alt - w : open /Applications/Wunderlist.app
