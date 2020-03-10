@@ -52,6 +52,7 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
     ln -svf   $DOTFILES_PATH/yabai          ~/.yabairc
     ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc
+    ln -svf   $DOTFILES_PATH/xmodmap ~/.xmodmap
 fi
 
 # Backup

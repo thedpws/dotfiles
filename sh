@@ -129,3 +129,5 @@ function checktemp(){
 
 neofetch
 export BASH_SILENCE_DEPRECATION_WARNING=1
+
+xmodmap ~/.xmodmap
