@@ -129,3 +129,6 @@ function checktemp(){
 export GOOGLE_APPLICATION_CREDENTIALS="/Users/azvasquez/Wordy-0bffa9f9aafc.json"
 alias sshautograder='ssh azvasquez@10.227.132.82'
 alias sftpautograder='sftp azvasquez@10.227.132.82'
+neofetch
+export BASH_SILENCE_DEPRECATION_WARNING=1
+xmodmap ~/.xmodmap
