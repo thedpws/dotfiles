@@ -2,6 +2,7 @@ set -g default-terminal "screen-256color"
 
 set -g status-bg green
 set -g status-fg black
+set-option -g default-shell /bin/bash
 
 
 # remap prefix from 'C-b' to 'C-f'
@@ -54,3 +55,5 @@ set -g status-interval 10     # redraw status line every 10 seconds
 ##set -g pane-active-border-bg colour51
 set -g mouse on
 
+## Fucking disable key repeating.
+#set repeat-time 0

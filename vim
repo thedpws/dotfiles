@@ -6,11 +6,10 @@ filetype off                  " required
 noremap ; :
 noremap : ;
 
-
 syntax enable
 set tabstop=2		" 1 tab = N spaces
 set softtabstop=2 	" 1 tab in editing = N spaces
-set shiftwidth=2    " indenting is 4 spaces
+set shiftwidth=2    " indenting is 2 spaces
 set expandtab		" tabs are spaces
 
 set number		    " show line numbers
@@ -64,7 +63,7 @@ nnoremap <C-H> <C-W><C-H>
 " Remove ALL autocommands for the current group.
 
 " Markdown -> slidy notes
-autocmd BufWritePost .notes.md silent! !pandoc -t slidy -s .notes.md -o .notes.html --metadata pagetitle="$(pwd) Notes" &
+" autocmd BufWritePost .notes.md silent! !pandoc -t slidy -s .notes.md -o .notes.html --metadata pagetitle="$(pwd) Notes" &
 
 " Markdown -> pdf
-autocmd BufWritePost *.md silent! !pandoc <afile> -o <afile>.pdf &
+" autocmd BufWritePost *.md silent! !pandoc <afile> -o <afile>.pdf &
