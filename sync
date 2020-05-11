@@ -67,3 +67,4 @@ ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
 ln -svf   $DOTFILES_PATH/tmux           ~/.tmux.conf
 ln -svf   $DOTFILES_PATH/kitty           ~/.config/kitty/kitty.conf
 ln -svf	  $DOTFILES_PATH/nvim		 ~/.config/nvim/init.vim
+ln -svf	  $DOTFILES_PATH/wallpapers		 /etc/profile.d/wallpapers.sh
