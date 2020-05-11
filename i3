@@ -14,7 +14,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 8
+font pango:Menlo-Regular 12
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -48,7 +48,7 @@ bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # icnrease screen brightness
 
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec dmenu_run
+bindsym $mod+space exec dmenu_run
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -96,7 +96,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+#bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 bindsym $mod+a focus parent
@@ -129,9 +129,9 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+#bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -159,10 +159,34 @@ mode "resize" {
         bindsym Control+bracketleft mode "default"
 }
 
-bindsym $mod+r mode "resize"
+bindsym $mod+Shift+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        status_command i3status
+  status_command i3status
+  colors {
+      background  $bg-color
+      separator #757575
+      #                       border        background        text
+      focused_workspace       $bg-color     $bg-color         $text-color
+      inactive_workspace       $inactive-bg-color     $inactive-bg-color         $inactive-text-color
+      urgent_workspace       $urgent-bg-color     $urgent-bg-color         $urgent-text-color
+  }
 }
+
+
+set $bg-color               #2f343f
+set $inactive-bg-color      #2f343f 
+set $text-color             #f3f4f5
+set $inactive-text-color    #676e7d
+set $urgent-bg-color        #e5e935
+
+# window                border              background          text                  indicator
+client.focused          $bg-color           $bg-color           $text-color           #00ff00
+client.unfocused        $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #00ff00
+client.focused_inactive $inactive-bg-color  $inactive-bg-color  $inactive-text-color  #00ff00
+client.urgent           $urgent-bg-color    $urgent-bg-color    $text-color    #00ff00
+
+
+
