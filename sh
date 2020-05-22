@@ -94,19 +94,19 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
-alias git='hub'
 
 # Set PATH
 export PATH="$PATH:~/.development/flutter/bin"
 export PATH="$PATH:/Applications/MATLAB_R2019b.app/bin"
+export PATH="$PATH:/opt/local/bin"
 export LINEUPS="~/Church/lineups"
+export EMACS="/usr/local/bin/emacs"
 alias n='vim .notes.md'
 alias s='source ~/.bash_profile'
 alias ss='vim ~/.bash_profile'
 alias cflogin='cf login -a https://api.paas.mia.ulti.io -o techstar-bootcamp -s dev-aeyzechiahv -u aeyzechiahv'
 alias crunchyroll='open https://crunchyroll.com'
 alias gcal='open https://calendar.google.com/calendar/r'
-alias github='hub'
 alias gmail='open https://mail.google.com/mail/u/0/#inbox'
 alias jira='open https://ultidev/secure/RapidBoard.jspa?rapidView=1740'
 alias l='clear'
@@ -116,7 +116,7 @@ alias ss='vim ~/.bash_profile'
 alias youtube='open https://youtube.com'
 alias ~='cd ~'
 alias ports='cat ~/Docs/ports'
-alias rabbit='open https://www.rabb.it -na "Google Chrome"'
+alias github='hub'
 alias restart='brew services restart'
 function checktemp(){
   osx-cpu-temp
