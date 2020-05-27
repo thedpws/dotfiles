@@ -1,6 +1,7 @@
 # Set PATH
 export PATH="$PATH:~/.development/flutter/bin"
 export PATH="$PATH:/Applications/MATLAB_R2019b.app/bin"
+export PATH="$PATH:/opt/cisco/anyconnect/bin"
 export LINEUPS="~/Church/lineups"
 alias n='vim .notes.md'
 alias s='source ~/.bashrc'
