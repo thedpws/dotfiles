@@ -1,3 +1,4 @@
 #!/bin/sh
 feh --no-fehbg --bg-center '/home/azvasquez/Pictures/MikuStars.jpg'
+feh --no-fehbg --bg-center '/home/azvasquez/Pictures/IA.png' '/home/azvasquez/Pictures/LonelyMiku.jpg' 
 compton &
