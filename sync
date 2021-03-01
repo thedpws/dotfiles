@@ -66,5 +66,5 @@ ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
 ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
 ln -svf   $DOTFILES_PATH/tmux           ~/.tmux.conf
 ln -svf   $DOTFILES_PATH/kitty           ~/.config/kitty/kitty.conf
-ln -svf   $DOTFILES_PATH/emacs           ~/.config/emacs/emacs.el
+ln -svf   $DOTFILES_PATH/emacs           ~/.emacs
 ln -svf	  $DOTFILES_PATH/nvim		 ~/.config/nvim/init.vim
