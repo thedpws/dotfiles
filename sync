@@ -37,9 +37,9 @@ if [[ "$OSTYPE" == "linux-gnu" ]]; then
     cat ~/.bashrc           >> ~/.bashrc.bak
     cat ~/.config/i3/config >> ~/.config/i3/config.bak
 
-    ln -svf 	$DOTFILES_PATH/sh 	        ~/.bashrc
-    ln -svf 	$DOTFILES_PATH/sh 	        ~/.zshrc
-    ln -svf 	$DOTFILES_PATH/i3		          ~/.config/i3/config
+    ln -svf   $DOTFILES_PATH/sh           ~/.bashrc
+    ln -svf   $DOTFILES_PATH/sh           ~/.zshrc
+    ln -svf   $DOTFILES_PATH/i3              ~/.config/i3/config
 fi
 if [[ "$OSTYPE" == "darwin"* ]]; then
     cat ~/.chunkwmrc        >> ~/.chunkwmrc.bak
@@ -47,8 +47,8 @@ if [[ "$OSTYPE" == "darwin"* ]]; then
     cat ~/.skhdrc           >> ~/.skhdrc.bak
     cat ~/.bash_profile     >> ~/.bash_profile.bak
 
-    ln -svf 	$DOTFILES_PATH/sh	            ~/.bash_profile
-    ln -svf 	$DOTFILES_PATH/sh	            ~/.zshrc
+    ln -svf   $DOTFILES_PATH/sh              ~/.bash_profile
+    ln -svf   $DOTFILES_PATH/sh              ~/.zshrc
     ln -svf   $DOTFILES_PATH/chunkwm        ~/.chunkwmrc
     ln -svf   $DOTFILES_PATH/yabai          ~/.yabairc
     ln -svf   $DOTFILES_PATH/skhd           ~/.skhdrc
@@ -62,9 +62,9 @@ cat ~/.bash_profile >> ~/.bash_profile.bak
 cat ~/.tmux.conf    >> ~/.tmux.conf.bak
 cat ~/.config/kitty/kitty.conf >> ~/.config/kitty/kitty.conf.bak
 
-ln -svf		$DOTFILES_PATH/vim		        ~/.vimrc
-ln -svf		$DOTFILES_PATH/input		      ~/.inputrc
+ln -svf    $DOTFILES_PATH/vim            ~/.vimrc
+ln -svf    $DOTFILES_PATH/input          ~/.inputrc
 ln -svf   $DOTFILES_PATH/tmux           ~/.tmux.conf
 ln -svf   $DOTFILES_PATH/kitty           ~/.config/kitty/kitty.conf
 ln -svf   $DOTFILES_PATH/emacs           ~/.emacs
-ln -svf	  $DOTFILES_PATH/nvim		 ~/.config/nvim/init.vim
+ln -svf    $DOTFILES_PATH/nvim     ~/.config/nvim/init.vim
