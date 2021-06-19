@@ -3,8 +3,6 @@ filetype off                  " required
 
 
 " Remaps
-noremap ; :
-noremap : ;
 
 syntax enable
 set tabstop=2		" 1 tab = N spaces
